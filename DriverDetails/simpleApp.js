@@ -1,7 +1,13 @@
 ﻿var simpleModule = angular.module('Simple', []);
 
-simpleModule.controller('Main', function () {
-    var main = this;
+simpleModule.factory('factory', function () {
+});
 
-    main.description = "This is from the controller?";
+simpleModule.service('MainService', function () {
+});
+
+simpleModule.controller('Main', function ($scope) {
+    var self = this;
+
+    $scope.description = function () { return "This is from the controller?"; }
 });

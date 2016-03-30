@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="Simple">
+<html >
 <head>
     <title>Simple</title>
 	<meta charset="utf-8" />
@@ -12,9 +12,9 @@
         Have a main module referenced as the  ng-app in the header,
         Have other things as a module in their own file and add them to the param collection in the main module setup.
         -->
-    <div ng-controller="Main as ctrl">
+    <div ng-app="Simple" ng-controller="Main as ctrl">
         <span>Stuff from model: </span>
-        <span ng-model="ctrl.description"></span>
+        <span>{{descrption}}</span>
     </div>
 </body>
 </html>
