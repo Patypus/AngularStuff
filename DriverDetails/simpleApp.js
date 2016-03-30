@@ -6,8 +6,14 @@ simpleModule.factory('factory', function () {
 simpleModule.service('MainService', function () {
 });
 
-simpleModule.controller('Main', function ($scope) {
+simpleModule.controller('MainController', function () {
     var self = this;
 
-    $scope.description = function () { return "This is from the controller?"; }
+    self.animals = [
+        { name: "Platypus" },
+        { name: "Lion" },
+        { name: "Hippo" },
+        { name: "Cappybara" },
+        { name: "Penguin" }
+    ]
 });
