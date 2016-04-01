@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Angular";
+}
+
+@Scripts.Render("../Scripts/Angular/angular.min.js")
+@Scripts.Render("../Scripts/Angular/app.js")
+
+
+<div class="container" ng-app="TestApp" ng-controller="TestController as test">
+    <div ng-repeat="creature in test.animals">
+        <h3>{{creature.name}}</h3>
+    </div>
+</div>
