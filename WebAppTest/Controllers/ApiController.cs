@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using WebAppTest.Models;
 
 namespace WebAppTest.Controllers
 {
     public class ApiController : Controller
     {
-        public JsResult GetAnimalsList()
+        [HttpGet]
+        public JsonResult GetAnimalsList()
         {
             var results = new List<AnimalViewModel>
             {
@@ -17,7 +17,7 @@ namespace WebAppTest.Controllers
                 new AnimalViewModel { Id = 4, Name = "Hippo" },
                 new AnimalViewModel { Id = 5, Name = "Octopus" },
             };
-            return new JsResult(results, JsonBehavior.AllowGet);
+            return Json(results, JsonRequestBehavior.AllowGet);
         }
     }
 }
