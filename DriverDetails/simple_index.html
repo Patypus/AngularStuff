@@ -8,16 +8,9 @@
     <script type="text/javascript" src="simpleApp.js"></script>
 </head>
 <body>
-    <!-- 
-        Have a main module referenced as the  ng-app in the header,
-        Have other things as a module in their own file and add them to the param collection in the main module setup.
-        -->
-    <!--<div ng-app="Simple" ng-controller="Main as main">
-        <span>Stuff from model: </span>
-        <span>{{main.descrption}}</span>
-    </div>-->
+
     <div class="container" ng-app="Simple" ng-controller="MainController as main">
-        <div ng-repeat="creature in main.animals">
+        <div ng-repeat="creature in main.animals()">
             <h3>{{creature.name}}</h3>
         </div>
     </div>
