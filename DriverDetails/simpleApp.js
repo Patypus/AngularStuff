@@ -78,10 +78,10 @@ simpleModule.service('DetailsService', function () {
     }
 });
 
-simpleModule.controller('DetailsService', function (MainService) {
+simpleModule.controller('MainController', function (DetailsService) {
     var self = this;
 
     self.teams = function () {
-        return MainService.GetTeams();
+        return DetailsService.GetTeams();
     }
 });
