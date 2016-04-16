@@ -4,7 +4,10 @@
     border-left-width: 5px;
     border-radius: 3px;
 }
-
-    .team-container .chapionship-year {
-        margin: 3px;
+    .team-container .championship-list {
+        overflow-wrap: break-word;
     }
+
+        .team-container .championship-list .chapionship-year {
+            margin: 3px;
+        }

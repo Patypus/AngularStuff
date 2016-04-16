@@ -15,13 +15,13 @@
         <div class="col-md-4">
             <div class="team-container" ng-repeat="team in main.teams()">
                 <h2>{{team.name}}</h2>
-                <div>
+                <div class="championship-list">
                     <span class="chapionship-year" ng-repeat="year in team.championships">{{year}}</span>
                 </div>
                 <h3>Drivers:</h3>
                 <div ng-repeat="driver in team.drivers">
                     <h4>{{driver.name}}</h4>
-                    <div>
+                    <div class="championship-list">
                         <span class="chapionship-year" ng-repeat="year in driver.championships">{{year}}</span>
                     </div>
                 </div>
