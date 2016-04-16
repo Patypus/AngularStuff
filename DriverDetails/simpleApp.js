@@ -81,7 +81,18 @@ simpleModule.service('DetailsService', function () {
 simpleModule.controller('MainController', function (DetailsService) {
     var self = this;
 
-    self.teams = function () {
-        return DetailsService.GetTeams();
-    }
+    self.cachedTeams = DetailsService.GetTeams();
+    self.selectedTeam = {};
+
+    self.addTeam = function () {
+        self.cachedTeams.push({
+            name: "Enter details",
+            championships: [],
+            drivers: []
+        });
+    };
+
+    self.selectTeam = function (team) {
+        self.selectedTeam = team;
+    };
 });
