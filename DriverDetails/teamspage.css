@@ -3,6 +3,7 @@
     border: 1px solid #eee;
     border-left-width: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
     .team-container .championship-list {
         overflow-wrap: break-word;
@@ -16,6 +17,18 @@
     margin: 10px;
 }
 
-.selected-team .name-title {
-    margin-bottom: 15px;
-}
+    .selected-team .name-title {
+        margin-bottom: 15px;
+    }
+    
+    .selected-team .championship-list {
+        overflow-wrap: break-word;
+    }
+
+        .selected-team .championship-list .chapionship-year {
+            margin: 3px;
+        }   
+
+    .selected-team .name-input {
+        margin: 5px;
+    }

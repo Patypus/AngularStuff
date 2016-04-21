@@ -85,11 +85,14 @@ simpleModule.controller('MainController', function (DetailsService) {
     self.selectedTeam = {};
 
     self.addTeam = function () {
-        self.cachedTeams.push({
+        var newTeam = {
             name: "Enter details",
             championships: [],
             drivers: []
-        });
+        }
+
+        self.cachedTeams.push(newTeam);
+        self.selectedTeam = newTeam;
     };
 
     self.selectTeam = function (team) {
@@ -97,6 +100,12 @@ simpleModule.controller('MainController', function (DetailsService) {
     };
 
     self.addDriverForSelectedTeam = function () {
-        debugger;
+        var newDriver = {
+            name: "Enter name",
+            number: "Enter number",
+            championships: []
+        };
+
+        self.selectedTeam.drivers.push(newDriver);
     }
 });

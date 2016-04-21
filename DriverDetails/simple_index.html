@@ -42,11 +42,11 @@
             </div>
 
             <h3 ng-show="main.selectedTeam.drivers != null">Drivers:</h3>
-            <div ng-repeat="driver in main.selectedTeam.drivers">
+            <div class="name-input" ng-repeat="driver in main.selectedTeam.drivers">
                 <input type="text" ng-model="driver.name"/>
             </div>
 
-            <a class="add-button btn btn-success" ng-click="main.addDriverForSelectedTeam()" ng-show="main.selectedTeam.drivers != null">
+            <a class="add-button btn btn-success" ng-click="main.addDriverForSelectedTeam()" ng-show="main.selectedTeam.drivers != null && main.selectedTeam.drivers.length < 2">
                 <span class="fa fa-plus"></span>
             </a>
 
