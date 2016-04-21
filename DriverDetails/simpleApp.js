@@ -95,4 +95,8 @@ simpleModule.controller('MainController', function (DetailsService) {
     self.selectTeam = function (team) {
         self.selectedTeam = team;
     };
+
+    self.addDriverForSelectedTeam = function () {
+        debugger;
+    }
 });

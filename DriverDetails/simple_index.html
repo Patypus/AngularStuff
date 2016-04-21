@@ -31,12 +31,25 @@
                 </div>
             </div>
 
-            <a class="btn btn-success" ng-click="main.addTeam()">
+            <a class="add-button btn btn-success" ng-click="main.addTeam()">
                 <span class="fa fa-lg fa-plus"></span>
             </a>
         </div>
-        <div class="col-md-6">
-            <h1>{{team.selectedTeam.name}}</h1>
+        <div class="col-md-6 selected-team">
+            <h1 class="name-title">{{main.selectedTeam.name}}</h1>
+            <div class="championship-list">
+                <span class="chapionship-year" ng-repeat="year in main.selectedTeam.championships">{{year}}</span>
+            </div>
+
+            <h3 ng-show="main.selectedTeam.drivers != null">Drivers:</h3>
+            <div ng-repeat="driver in main.selectedTeam.drivers">
+                <input type="text" ng-model="driver.name"/>
+            </div>
+
+            <a class="add-button btn btn-success" ng-click="main.addDriverForSelectedTeam()" ng-show="main.selectedTeam.drivers != null">
+                <span class="fa fa-plus"></span>
+            </a>
+
         </div>
 
     </div>

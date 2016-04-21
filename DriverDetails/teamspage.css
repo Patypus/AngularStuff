@@ -11,3 +11,11 @@
         .team-container .championship-list .chapionship-year {
             margin: 3px;
         }
+
+.add-button {
+    margin: 10px;
+}
+
+.selected-team .name-title {
+    margin-bottom: 15px;
+}
