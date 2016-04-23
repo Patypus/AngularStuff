@@ -23,6 +23,7 @@
     
     .selected-team .championship-list {
         overflow-wrap: break-word;
+        width: 530px;
     }
 
         .selected-team .championship-list .chapionship-year {
