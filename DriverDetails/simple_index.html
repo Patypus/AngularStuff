@@ -43,13 +43,16 @@
 
             <h3 ng-show="main.selectedTeam.drivers != null">Drivers:</h3>
             <div class="name-input" ng-repeat="driver in main.selectedTeam.drivers">
-                <span ng-hide="main.editingDriverName == $index">{{driver.name}}</span>
-                <input ng-show="main.editingDriverName == $index" type="text" ng-model="driver.name" />
-                <a ng-click="main.editDriverName($index)" class="fa fa-pencil edit-item"></a>
-                <br/>
-                <span ng-hide="main.editingDriverNumber == $index">{{driver.number}}</span>
-                <input ng-show="main.editingDriverNumber == $index" type="text" ng-model="driver.number"/>
-                <a ng-click="main.editDriverNumber($index)" class="fa fa-pencil edit-item"></a>
+                <div class="driver-details-section">
+                    <span ng-hide="main.editingDriverName == $index">{{driver.name}}</span>
+                    <input ng-show="main.editingDriverName == $index" type="text" ng-model="driver.name" />
+                    <a ng-click="main.editDriverName($index)" class="fa fa-pencil edit-item"></a>
+                </div>
+                <div class="driver-details-section">
+                    <span ng-hide="main.editingDriverNumber == $index">{{driver.number}}</span>
+                    <input ng-show="main.editingDriverNumber == $index" type="text" ng-model="driver.number"/>
+                    <a ng-click="main.editDriverNumber($index)" class="fa fa-pencil edit-item"></a>
+                </div>
 
             </div>
 

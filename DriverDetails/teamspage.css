@@ -30,11 +30,15 @@
             margin: 3px;
         }   
 
-    .selected-team .name-input {
-        margin: 5px;
+    .selected-team .driver-details-section {
+        margin-bottom: 10px;
     }
 
-    .selected-team .edit-item {
-        color: #269abc;
-        text-decoration: none;
-    }
+        .selected-team .driver-details-section .name-input {
+            margin: 5px;
+        }
+
+        .selected-team .driver-details-section .edit-item {
+            color: #269abc;
+            text-decoration: none;
+        }
