@@ -33,3 +33,8 @@
     .selected-team .name-input {
         margin: 5px;
     }
+
+    .selected-team .edit-item {
+        color: #269abc;
+        text-decoration: none;
+    }

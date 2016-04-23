@@ -83,6 +83,8 @@ simpleModule.controller('MainController', function (DetailsService) {
 
     self.cachedTeams = DetailsService.GetTeams();
     self.selectedTeam = {};
+    self.editingDriverName = -1;
+    self.editingDriverNumber = -1;
 
     self.addTeam = function () {
         var newTeam = {
@@ -107,5 +109,21 @@ simpleModule.controller('MainController', function (DetailsService) {
         };
 
         self.selectedTeam.drivers.push(newDriver);
+    }
+
+    self.editDriverNumber = function (index) {
+        if (self.editingDriverNumber === -1) {
+            self.editingDriverNumber = index
+        } else {
+            self.editingDriverNumber = -1
+        }
+    }
+
+    self.editDriverName = function (index) {
+        if (self.editingDriverName === -1) {
+            self.editingDriverName = index
+        } else {
+            self.editingDriverName = -1
+        }
     }
 });
